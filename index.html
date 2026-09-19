@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devocional ADEC</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f1ed;
+  }
+  .card {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.10);
+    text-align: center;
+  }
+  .brand {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+  }
+  .subtitle {
+    margin: 0 0 24px;
+    font-size: 16px;
+    opacity: .72;
+  }
+  .cover {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 22px;
+    border-radius: 18px;
+    background: linear-gradient(135deg,#8b6f47,#c7aa7b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 52px;
+  }
+  .date {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    opacity: .65;
+    margin-bottom: 8px;
+  }
+  h2 {
+    margin: 0 0 20px;
+    font-size: 23px;
+  }
+  audio {
+    width: 100%;
+    margin: 5px 0 22px;
+  }
+  .hint {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: .65;
+    margin-bottom: 20px;
+  }
+  .spotify {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid #ddd;
+  }
+</style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="brand">ADEC</div>
+
+    <div class="cover" aria-hidden="true">🎧</div>
+
+    <div class="date">DEVOCIONAL</div>
+    <h1>Devocional ADEC</h1>
+    <p class="subtitle">Uma palavra para começar o seu dia</p>
+
+    <h2>Ame sua rotina</h2>
+
+    <!--
+      TROQUE SOMENTE O VALOR DE src PELO LINK PÚBLICO DIRETO DO SEU MP3.
+      Exemplo:
+      src="https://seusite.com/audio/devocional-29-7.mp3"
+    -->
+    <audio controls preload="metadata">
+      <source src="Devocional_29.7_web.mp3" type="audio/mpeg">
+      Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    <p class="hint">
+      Toque em ▶ para ouvir o devocional.
+      Não é necessário instalar o Spotify.
+    </p>
+
+    <!-- Substitua pelo seu link do episódio no Spotify -->
+    <a class="spotify"
+       href="https://open.spotify.com/episode/1k80uK7i2O0AQsSDDM6w0T"
+       target="_blank"
+       rel="noopener">
+       🎧 Ouvir também no Spotify
+    </a>
+  </main>
+</body>
+</html>
