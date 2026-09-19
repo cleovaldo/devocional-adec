@@ -12,7 +12,8 @@
 <meta property="og:type" content="website" />
 
 <title>Devocional ADEC</title>
-<!-- Fonte elegante estilo serifada minimalista -->
+
+<!-- Fontes Elegantes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -29,8 +30,24 @@
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    /* Imagem de Fundo com filtro escuro estético */
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('fundo-igreja.png') center/cover no-repeat fixed;
+    position: relative;
+  }
+
+  /* Logo posicionada no canto superior direito */
+  .header-logo {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 75px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10;
   }
 
   .container {
@@ -38,26 +55,7 @@
     max-width: 380px;
     text-align: left;
     padding: 20px;
-  }
-
-  /* Detalhe da barra vertical com texto elegante (Estilo do Vídeo) */
-  .tagline {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    opacity: 0.9;
-  }
-
-  .tagline::before {
-    content: '';
-    display: inline-block;
-    width: 2px;
-    height: 22px;
-    background-color: #ffffff;
+    margin-top: 40px; /* Espaço para não cobrir com a logo no topo em telas menores */
   }
 
   .brand {
@@ -81,11 +79,31 @@
     font-size: 13px;
     font-weight: 300;
     opacity: 0.8;
-    margin: 0 0 35px 0;
+    margin: 0 0 30px 0;
     letter-spacing: 0.5px;
   }
 
-  /* Cartão translucido para o Player */
+  /* Detalhe estético com barra vertical */
+  .tagline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+
+  .tagline::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 22px;
+    background-color: #ffffff;
+  }
+
+  /* Cartão Translúcido do Player */
   .player-card {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(16px);
@@ -112,7 +130,6 @@
     outline: none;
   }
 
-  /* Estilização básica para o áudio no iOS e Android */
   audio::-webkit-media-controls-panel {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -154,13 +171,15 @@
 </head>
 
 <body>
+  <!-- Logo no Canto Superior Direito -->
+  <img src="LogoAD.png" alt="Assembleia de Deus" class="header-logo">
+
   <main class="container">
     <div class="brand">ADEC</div>
     <h1>Devocional</h1>
     <p class="subtitle">Uma palavra de fé para o seu dia</p>
 
-    <!-- Elemento no estilo do vídeo enviado -->
-    <div class="tagline">Pr. Cleovaldo Batista</div>
+    <div class="tagline">Momento com Deus</div>
 
     <div class="player-card">
       <h2 class="devocional-title">Ame sua rotina</h2>
