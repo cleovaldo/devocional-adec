@@ -80,6 +80,7 @@
     text-decoration: none;
     font-weight: 700;
     border: 1px solid #ddd;
+    color: #333;
   }
 </style>
 </head>
@@ -96,42 +97,18 @@
 
     <h2>Ame sua rotina</h2>
 
-    <!--
-      TROQUE SOMENTE O VALOR DE src PELO LINK PÚBLICO DIRETO DO SEU MP3.
-      Exemplo:
-      src="https://seusite.com/audio/devocional-29-7.mp3"
-
-   
- <audio controls preload="metadata">
-      <source src="Devocional.mp3" type="audio/mpeg">
+    <!-- Reproductor Único de Áudio -->
+    <audio controls preload="metadata">
+      <source src="audio/hoje.mp3" type="audio/mpeg">
       Seu navegador não suporta a reprodução de áudio.
     </audio>
--->
-   <audio controls preload="none">
-  <source src="audio/Devocional-19092026.mp3" type="audio/mpeg">
-  Seu navegador não suporta o reprodutor de áudio.
-</audio>
-   
+
     <p class="hint">
-      Toque em ▶ para ouvir o devocional.
+      Toque em ▶ para ouvir o devocional.<br>
       Não é necessário instalar o Spotify.
     </p>
-<h2 id="titulo-devocional">Carregando...</h2>
-<p id="data-devocional"></p>
-<audio id="player" controls></audio>
 
-<script>
-  fetch('dados.json?v=' + new Date().getTime()) // evita cache
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('titulo-devocional').innerText = data.titulo;
-      document.getElementById('data-devocional').innerText = data.data;
-
-      const player = document.getElementById('player');
-      player.src = data.arquivo;
-    });
-</script>
-    <!-- Substitua pelo seu link do episódio no Spotify -->
+    <!-- Link do Episódio no Spotify -->
     <a class="spotify"
        href="https://open.spotify.com/episode/1k80uK7i2O0AQsSDDM6w0T"
        target="_blank"
