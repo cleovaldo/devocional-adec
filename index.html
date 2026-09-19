@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Configurações para Pré-visualização do Link no WhatsApp (Open Graph) -->
+<meta property="og:title" content="Devocional ADEC - Ame sua rotina" />
+<meta property="og:description" content="Uma palavra de fé para abençoar o seu dia. Toque para ouvir o áudio." />
+<meta property="og:url" content="https://cleovaldo.github.io/devocional-adec/" />
+<meta property="og:image" content="https://cleovaldo.github.io/devocional-adec/fundo-igreja.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+<meta property="og:audio" content="https://cleovaldo.github.io/devocional-adec/Devocional.mp3" />
+<meta property="og:audio:type" content="audio/mpeg" />
+
 <title>Devocional ADEC</title>
 <style>
   * { box-sizing: border-box; }
@@ -13,17 +26,15 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f1ed;
-    /* Configuração da imagem de fundo */
-    background-image: url('fundo-igreja.png'); /* Nome da imagem salva no repositório */
+    background-image: url('fundo-igreja.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-attachment: fixed;
   }
   
-  /* Camada de transparência sobre o fundo */
   body::before {
     content: "";
     position: fixed;
@@ -31,19 +42,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(244, 241, 237, 0.85); /* Cor de fundo com transparência */
+    background-color: rgba(244, 241, 237, 0.85);
     z-index: -1;
   }
 
   .card {
     width: 100%;
-    max-width: 400px; /* Reduzido para encaixar melhor em celulares */
-    background: rgba(255, 255, 255, 0.95); /* Cartão levemente transparente */
-    border-radius: 30px; /* Bordas mais arredondadas */
-    padding: 40px 30px; /* Mais preenchimento vertical */
-    box-shadow: 0 15px 35px rgba(0,0,0,.15); /* Sombra mais suave */
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
     text-align: center;
-    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do cartão */
+    backdrop-filter: blur(5px);
   }
   
   .brand {
@@ -51,7 +62,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 15px;
-    color: #8b6f47; /* Cor da marca */
+    color: #8b6f47;
   }
   
   h1 {
@@ -69,17 +80,17 @@
   }
   
   .cover {
-    width: 120px; /* Um pouco menor para mobile */
+    width: 120px;
     height: 120px;
     margin: 0 auto 25px;
-    border-radius: 50%; /* Capa redonda */
-    background: linear-gradient(135deg, #a1887f, #d7ccc8); /* Cores mais suaves */
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a1887f, #d7ccc8);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 50px;
-    box-shadow: 0 8px 20px rgba(139, 111, 71, 0.3); /* Sombra na capa */
+    box-shadow: 0 8px 20px rgba(139, 111, 71, 0.3);
   }
   
   .date-container {
@@ -103,14 +114,12 @@
     font-weight: 600;
   }
   
-  /* Estilização do Player de Áudio */
   audio {
     width: 100%;
     margin-bottom: 25px;
     outline: none;
   }
   
-  /* Customização básica do player para navegadores modernos (Webkit) */
   audio::-webkit-media-controls-panel {
       background-color: #f1f3f4;
   }
@@ -127,7 +136,6 @@
     padding: 0 15px;
   }
   
-  /* Botão Spotify Melhorado */
   .spotify {
     display: flex;
     align-items: center;
@@ -139,7 +147,7 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
-    border: 2px solid #1DB954; /* Cor do Spotify */
+    border: 2px solid #1DB954;
     color: #1DB954;
     transition: all 0.3s ease;
     background-color: transparent;
@@ -156,19 +164,12 @@
   }
 </style>
 </head>
-<!-- Tags para pré-visualização bonita no WhatsApp -->
-<meta property="og:title" content="Devocional ADEC - Ame sua rotina" />
-<meta property="og:description" content="Uma palavra de fé para abençoar o seu dia. Toque para ouvir." />
-<meta property="og:image" content="https://cleovaldo.github.io/devocional-adec/fundo-igreja.png" />
-<meta property="og:type" content="music.song" />
-<meta property="og:audio" content="https://cleovaldo.github.io/devocional-adec/Devocional.mp3" />
-<meta property="og:audio:type" content="audio/mpeg" />
+
 <body>
   <main class="card">
     <div class="brand">ADEC</div>
 
     <div class="cover" aria-hidden="true">
-        <!-- Ícone SVG para melhor qualidade -->
         <svg fill="currentColor" viewBox="0 0 24 24" width="60" height="60"><path d="M12 3.23c-3.73 0-6.77 3.04-6.77 6.77v2.26c-.73 0-1.32.59-1.32 1.32v6.77c0 .73.59 1.32 1.32 1.32h1.13c.12 0 .23-.04.32-.12.1-.07.16-.18.16-.3V12.13c0-.12-.06-.23-.16-.31a.48.48 0 00-.32-.12h-.37v-1.7c0-3.21 2.61-5.82 5.82-5.82s5.82 2.61 5.82 5.82v1.7h-.37c-.13 0-.24.05-.33.13-.09.08-.15.19-.15.31v9.04c0 .12.06.23.15.3.1.08.2.12.33.12h1.13c.73 0 1.32-.59 1.32-1.32v-6.77c0-.73-.59-1.32-1.32-1.32v-2.26c0-3.73-3.04-6.77-6.77-6.77z"/></svg>
     </div>
 
@@ -180,7 +181,6 @@
         <h2>Ame sua rotina</h2>
     </div>
 
-    <!-- Player de Áudio -->
     <audio controls preload="metadata">
       <source src="Devocional.mp3" type="audio/mpeg">
       Seu navegador não suporta a reprodução de áudio.
@@ -190,12 +190,10 @@
       Toque no botão de play (▶) acima para ouvir a mensagem de hoje.
     </p>
 
-    <!-- Botão Spotify com Ícone -->
     <a class="spotify"
        href="https://open.spotify.com/episode/1k80uK7i2O0AQsSDDM6w0T"
        target="_blank"
        rel="noopener">
-       <!-- Ícone simples do Spotify -->
        <svg class="spotify-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.306c-.22.361-.692.476-1.053.256-2.887-1.764-6.521-2.162-10.803-1.182-.413.095-.824-.162-.919-.575-.095-.413.162-.824.575-.919 4.697-1.072 8.706-.618 11.944 1.359.361.22.476.692.256 1.053zm1.47-3.26c-.277.452-.867.601-1.319.324-3.303-2.03-8.339-2.616-12.246-1.428-.51.156-1.053-.136-1.209-.646-.156-.51.136-1.053.646-1.209 4.453-1.355 10.006-.704 13.804 1.628.452.277.601.867.324 1.319zm.139-3.385C15.222 8.164 8.707 7.947 4.93 9.094c-.58.176-1.196-.164-1.372-.744-.176-.58.164-1.196.744-1.372 4.332-1.314 11.531-1.066 16.035 1.609.522.311.691.987.38 1.509-.311.522-.987.691-1.509.38z"/></svg>
        Ouvir no Spotify
     </a>
