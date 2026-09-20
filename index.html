@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Tags para Pré-visualização no WhatsApp -->
+<!-- Configurações para Miniatura e Pré-visualização no WhatsApp (Open Graph) -->
 <meta property="og:title" content="Ame Pregar - Pr. Cleovaldo Batista" />
-<meta property="og:description" content="Oratória para Jovens | Toque para ouvir a mensagem." />
+<meta property="og:description" content="Oratória para Jovens | Devocional ADEC. Toque para ouvir a mensagem." />
 <meta property="og:url" content="https://cleovaldo.github.io/devocional-adec/" />
-<meta property="og:image" content="https://cleovaldo.github.io/devocional-adec/fundo-igreja.png" />
+<meta property="og:image" content="https://cleovaldo.github.io/devocional-adec/BillyGraham.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:type" content="website" />
 
 <title>Ame Pregar - Devocional ADEC</title>
@@ -56,14 +59,14 @@
 
   .container {
     width: 100%;
-    max-width: 380px; /* Largura base ideal para manter a proporção 9:16 em telas */
+    max-width: 380px;
   }
 
   /* Card do Player em Proporção Exata 9:16 */
   .player-card {
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16; /* Força a proporção vertical 9:16 */
+    aspect-ratio: 9 / 16;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -77,7 +80,6 @@
     overflow: hidden;
   }
 
-  /* Cabeçalho Interno do Card */
   .card-header {
     margin-bottom: 12px;
   }
@@ -130,11 +132,10 @@
     border-left: 3px solid #ffd79d;
   }
 
-  /* Imagem Ajustável no Centro do Card */
   .image-wrapper {
     position: relative;
     width: 100%;
-    flex: 1; /* Ocupa o espaço central disponível de forma proporcional */
+    flex: 1;
     max-height: 260px;
     border-radius: 18px;
     overflow: hidden;
@@ -159,7 +160,6 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 14, 23, 0.8) 100%);
   }
 
-  /* Rodapé do Card com o Título do Áudio e Player */
   .card-footer {
     width: 100%;
   }
@@ -200,7 +200,6 @@
   <main class="container">
     <div class="player-card">
       
-      <!-- Cabeçalho do Card -->
       <header class="card-header">
         <span class="brand-badge">ADEC</span>
         <h1>Ame Pregar</h1>
@@ -208,13 +207,11 @@
         <div class="tagline">Oratória para Jovens</div>
       </header>
 
-      <!-- Imagem Central -->
       <div class="image-wrapper">
         <img src="BillyGraham.jpg" alt="Billy Graham" class="speaker-image">
         <div class="image-overlay"></div>
       </div>
 
-      <!-- Rodapé do Card (Título do Devocional e Áudio) -->
       <footer class="card-footer">
         <h2 class="devocional-title">A importância da Voz</h2>
 
