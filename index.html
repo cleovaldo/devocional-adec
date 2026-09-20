@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 16px;
+    padding: 16px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #ffffff;
     background: linear-gradient(180deg, rgba(12, 16, 26, 0.60) 0%, rgba(6, 8, 14, 0.85) 100%), url('fundo-igreja.png') center/cover no-repeat fixed;
@@ -43,11 +43,11 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 68px;
+    width: 65px;
     height: auto;
     background: rgba(255, 255, 255, 0.88);
-    padding: 8px;
-    border-radius: 16px;
+    padding: 6px;
+    border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -56,91 +56,90 @@
 
   .container {
     width: 100%;
-    max-width: 400px;
-    margin-top: 50px;
+    max-width: 380px; /* Largura base ideal para manter a proporção 9:16 em telas */
   }
 
-  /* Cabeçalho do App */
-  .header-info {
-    margin-bottom: 20px;
-    padding-left: 4px;
+  /* Card do Player em Proporção Exata 9:16 */
+  .player-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16; /* Força a proporção vertical 9:16 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 28px;
+    padding: 24px 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  /* Cabeçalho Interno do Card */
+  .card-header {
+    margin-bottom: 12px;
   }
 
   .brand-badge {
     display: inline-block;
     font-family: 'Outfit', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #ffd79d;
     background: rgba(255, 215, 157, 0.12);
     border: 1px solid rgba(255, 215, 157, 0.25);
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   h1 {
     font-family: 'Outfit', sans-serif;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.5px;
     background: linear-gradient(135deg, #ffffff 0%, #d8e2fd 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
-  /* Barra de Categoria Estilizada */
   .tagline {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-family: 'Outfit', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0.3px;
-    padding: 6px 14px;
+    padding: 4px 10px;
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
+    border-radius: 10px;
     border-left: 3px solid #ffd79d;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
   }
 
-  /* Card do Player Profissional (Glassmorphism) */
-  .player-card {
-    position: relative;
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(25px) saturate(160%);
-    -webkit-backdrop-filter: blur(25px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 28px;
-    padding: 20px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    margin-top: 18px;
-    overflow: hidden;
-  }
-
-  /* Container da Imagem com Efeito de Sombra e Degradê Interno */
+  /* Imagem Ajustável no Centro do Card */
   .image-wrapper {
     position: relative;
     width: 100%;
-    height: 240px;
-    border-radius: 20px;
+    flex: 1; /* Ocupa o espaço central disponível de forma proporcional */
+    max-height: 260px;
+    border-radius: 18px;
     overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    margin: 12px 0;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
@@ -156,33 +155,36 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 14, 23, 0.85) 100%);
+    height: 40%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 14, 23, 0.8) 100%);
+  }
+
+  /* Rodapé do Card com o Título do Áudio e Player */
+  .card-footer {
+    width: 100%;
   }
 
   .devocional-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 16px;
-    line-height: 1.25;
-    text-align: left;
+    margin-bottom: 12px;
+    line-height: 1.2;
   }
 
-  /* Player de Áudio Modernizado */
   .audio-container {
     background: rgba(0, 0, 0, 0.25);
-    padding: 8px;
-    border-radius: 16px;
+    padding: 6px;
+    border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   audio {
     width: 100%;
-    height: 42px;
+    height: 40px;
     outline: none;
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
   audio::-webkit-media-controls-panel {
@@ -196,28 +198,34 @@
   <img src="LogoAD.png" alt="Assembleia de Deus" class="header-logo">
 
   <main class="container">
-    <header class="header-info">
-      <span class="brand-badge">ADEC</span>
-      <h1>Ame Pregar</h1>
-      <p class="subtitle">Pr. Cleovaldo Batista</p>
-      
-      <div class="tagline">Oratória para Jovens</div>
-    </header>
-
     <div class="player-card">
+      
+      <!-- Cabeçalho do Card -->
+      <header class="card-header">
+        <span class="brand-badge">ADEC</span>
+        <h1>Ame Pregar</h1>
+        <p class="subtitle">Pr. Cleovaldo Batista</p>
+        <div class="tagline">Oratória para Jovens</div>
+      </header>
+
+      <!-- Imagem Central -->
       <div class="image-wrapper">
         <img src="BillyGraham.jpg" alt="Billy Graham" class="speaker-image">
         <div class="image-overlay"></div>
       </div>
 
-      <h2 class="devocional-title">A importância da Voz</h2>
+      <!-- Rodapé do Card (Título do Devocional e Áudio) -->
+      <footer class="card-footer">
+        <h2 class="devocional-title">A importância da Voz</h2>
 
-      <div class="audio-container">
-        <audio controls preload="metadata">
-          <source src="Devocional.mp3" type="audio/mpeg">
-          Seu navegador não suporta a reprodução de áudio.
-        </audio>
-      </div>
+        <div class="audio-container">
+          <audio controls preload="metadata">
+            <source src="Devocional.mp3" type="audio/mpeg">
+            Seu navegador não suporta a reprodução de áudio.
+          </audio>
+        </div>
+      </footer>
+
     </div>
   </main>
 </body>
