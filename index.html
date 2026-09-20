@@ -5,181 +5,188 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Meta Tags para Pré-visualização no WhatsApp -->
-<meta property="og:title" content="Devocional ADEC - Ame sua rotina" />
-<meta property="og:description" content="Uma palavra de fé para abençoar o seu dia. Toque para ouvir." />
+<meta property="og:title" content="Ame Pregar - Pr. Cleovaldo Batista" />
+<meta property="og:description" content="Oratória para Jovens | Toque para ouvir a mensagem." />
 <meta property="og:url" content="https://cleovaldo.github.io/devocional-adec/" />
 <meta property="og:image" content="https://cleovaldo.github.io/devocional-adec/fundo-igreja.png" />
 <meta property="og:type" content="website" />
 
-<title>Devocional ADEC</title>
+<title>Ame Pregar - Devocional ADEC</title>
 
-<!-- Fontes Elegantes -->
+<!-- Fontes Modernas & Elegantes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  * { box-sizing: border-box; }
+  * { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+  }
   
   body {
-    margin: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
+    padding: 24px 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: #ffffff;
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('fundo-igreja.png') center/cover no-repeat fixed;
+    background: linear-gradient(180deg, rgba(12, 16, 26, 0.60) 0%, rgba(6, 8, 14, 0.85) 100%), url('fundo-igreja.png') center/cover no-repeat fixed;
     position: relative;
+    overflow-x: hidden;
   }
 
-  /* Logo posicionada no canto superior direito */
+  /* Logo de Vidro no Canto Superior Direito */
   .header-logo {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 75px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 68px;
     height: auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 6px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 10;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
   }
 
   .container {
     width: 100%;
-    max-width: 380px;
-    text-align: left;
-    padding: 20px;
-    margin-top: 40px;
+    max-width: 400px;
+    margin-top: 50px;
   }
 
-  .brand {
+  /* Cabeçalho do App */
+  .header-info {
+    margin-bottom: 20px;
+    padding-left: 4px;
+  }
+
+  .brand-badge {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 4px;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    opacity: 0.75;
-    margin-bottom: 8px;
+    color: #ffd79d;
+    background: rgba(255, 215, 157, 0.12);
+    border: 1px solid rgba(255, 215, 157, 0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
   }
 
   h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
-    font-weight: 400;
-    margin: 0 0 6px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
     line-height: 1.1;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #d8e2fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
   }
 
   .subtitle {
-    font-size: 13px;
-    font-weight: 300;
-    opacity: 0.8;
-    margin: 0 0 30px 0;
-    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 18px;
   }
 
-  /* Detalhe estético com barra vertical */
+  /* Barra de Categoria Estilizada */
   .tagline {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    opacity: 0.9;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.3px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    border-left: 3px solid #ffd79d;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
-  .tagline::before {
-    content: '';
-    display: inline-block;
-    width: 2px;
-    height: 22px;
-    background-color: #ffffff;
-  }
-
-  /* Cartão Translúcido do Player */
+  /* Card do Player Profissional (Glassmorphism) */
   .player-card {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 24px 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    margin-top: 18px;
+    overflow: hidden;
   }
 
-  /* Capa com a Foto do Billy Graham */
+  /* Container da Imagem com Efeito de Sombra e Degradê Interno */
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
   .speaker-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    object-position: top;
-    border-radius: 14px;
-    margin-bottom: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    object-position: top center;
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 14, 23, 0.85) 100%);
   }
 
   .devocional-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
     font-weight: 600;
-    margin: 0 0 15px 0;
     color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.25;
     text-align: left;
+  }
+
+  /* Player de Áudio Modernizado */
+  .audio-container {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   audio {
     width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    height: 42px;
     outline: none;
+    border-radius: 12px;
   }
 
   audio::-webkit-media-controls-panel {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  .hint {
-    font-size: 12px;
-    opacity: 0.75;
-    text-align: center;
-    margin: 0 0 20px 0;
-  }
-
-  .spotify {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 12px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-  }
-
-  .spotify:active {
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .spotify-icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+    background-color: rgba(255, 255, 255, 0.92);
   }
 </style>
 </head>
@@ -189,24 +196,29 @@
   <img src="LogoAD.png" alt="Assembleia de Deus" class="header-logo">
 
   <main class="container">
-    <div class="brand">ADEC</div>
-    <h1>Ame Pregar</h1>
-    <p class="subtitle">Pr. Cleovaldo Batista</p>
-
-    <div class="tagline">Oratória para Jovens</div>
+    <header class="header-info">
+      <span class="brand-badge">ADEC</span>
+      <h1>Ame Pregar</h1>
+      <p class="subtitle">Pr. Cleovaldo Batista</p>
+      
+      <div class="tagline">Oratória para Jovens</div>
+    </header>
 
     <div class="player-card">
-      <!-- Foto do Billy Graham como capa do player -->
-      <img src="BillyGraham.jpg" alt="Billy Graham" class="speaker-image">
+      <div class="image-wrapper">
+        <img src="BillyGraham.jpg" alt="Billy Graham" class="speaker-image">
+        <div class="image-overlay"></div>
+      </div>
 
       <h2 class="devocional-title">A importância da Voz</h2>
 
-      <audio controls preload="metadata">
-        <source src="Devocional.mp3" type="audio/mpeg">
-        Seu navegador não suporta a reprodução de áudio.
-      </audio>
-
-   </div>
+      <div class="audio-container">
+        <audio controls preload="metadata">
+          <source src="Devocional.mp3" type="audio/mpeg">
+          Seu navegador não suporta a reprodução de áudio.
+        </audio>
+      </div>
+    </div>
   </main>
 </body>
 </html>
